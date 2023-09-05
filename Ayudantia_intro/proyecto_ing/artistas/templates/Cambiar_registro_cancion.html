@@ -1,0 +1,20 @@
+<?php include 'Principal_caciones.html'; ?>
+
+<h1>Cambiar Cancion</h1>
+
+<form action="cambiar_registro/{{cancion.id}}" method="post">
+{% csrf_token %}
+Nombre:<br>
+<input name="nombre" value="{{cancion.nombre}}">
+<br><br>
+Letra:<br>
+<input name="letra" value="{{cancion.letra}}">
+<br><br>
+Fecha composicion :<br>
+<input type="date" name="fecha_composicion" value="{{cancion.fecha_composicion}}">
+<br><br>
+Id artista:<br>
+<input name="id_artista" value="{{cancion.id_artista_id}}">
+<br><br>
+<input type="submit" value="Submit">
+</form>

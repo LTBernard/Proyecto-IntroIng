@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ver Personas</title>
+    </head>
+        <body>
+            <table border="1">
+                <thead>
+                        <h1>Personas</h1>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Id</td> 
+                        <td>Nombre</td> 
+                        <td>Email</td>   
+                        <td>Nombre artistico</td>
+                    </tr>
+                    <!-- Codigo HTML -->
+                    {% for c in artistas %}
+                    <tr>
+                        <td>{{c.id}}</td> 
+                        <td> {{c.nombre}}</td> 
+                        <td> {{c.email}}</td>   
+                        <td>{{c.artista_nombre_artistico}}</td>
+                        <td><a href="cambiar/{{c.id}}">Cambiar</a></td>
+                        <td><a href="borrar/{{c.id}}">Borrar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <p>
+                <a href="crear/">Añadir Usuario</a>
+                <a href="/">Volver</a>
+            </p>
+        </body>
+</html>

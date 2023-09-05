@@ -1,0 +1,17 @@
+<?php include 'Principal.html'; ?>
+
+<h1>Cambiar Artista</h1>
+
+<form action="cambiar_registro/{{artista.id}}" method="post">
+{% csrf_token %}
+Nombre:<br>
+<input name="nombre" value="{{artista.nombre}}">
+<br><br>
+Email:<br>
+<input name="email" value="{{artista.email}}">
+<br><br>
+Nombre artistico:<br>
+<input name="artista_nombre_artistico" value="{{artista.artista_nombre_artistico}}">
+<br><br>
+<input type="submit" value="Submit">
+</form>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF">
+        <title>Gestion</title>
+        <script></script>
+    </head>
+    <body>
+        <form action="redirect/" method="post">
+            {% csrf_token %}
+            Nombre:<br>
+            <input name='nombre'>
+            <br><br>
+            Letra:<br>
+            <input name='letra'>
+            <br><br>
+            Fecha composicion:<br>
+            <input type="date" name='fecha_composicion'>
+            <br><br>
+            Id artista:<br>
+            <input name='id_artista'>
+            <br><br>
+            <input type="submit" value="Submit">
+            </form>
+    </body>
+</html>
